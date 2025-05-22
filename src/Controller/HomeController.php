@@ -76,11 +76,15 @@ final class HomeController extends AbstractController
     }
 
 
+
+
+
+    #IsGRANTED[('ROLE_ADMIN')]
     #[Route('/smartphone/delete/{id}', name: 'app_smartphone_delete')]
-      public function delete(Smartphone $smartphone, Request $request, EntityManagerInterface $entityManager): Response{
+      public function delete(Smartphone $smartphone, EntityManagerInterface $entityManager): Response{
         $entityManager->remove($smartphone);
         $entityManager->flush();
-        $this->addFlash('success', 'phone is gewist');
+        $this->addFlash('danger', 'phone is gewist');
         return $this->redirectToRoute('app_home');
     }
 

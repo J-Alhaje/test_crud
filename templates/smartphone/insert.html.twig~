@@ -26,12 +26,11 @@
                     <div class="col-6">
                         {{ form_row(form.description) }}
                     </div>
-
-                    <div class="col-6">
-                        {{ form_row(form.vendor) }}
-                    </div>
                     <div class="col-12">
                         {{ form_row(form.picture) }}
+                    </div>
+                    <div class="col-6">
+                        {{ form_row(form.vendor) }}
                     </div>
                 </div>
                 {{form_end(form) }}

@@ -7,6 +7,8 @@
 
                 <h1>{{ smartphone.type }}</h1>
 
+                <p>{{ smartphone.color }} - {{ smartphone.memory }}Go</p>
+
                 {% if smartphone.picture %}
                     <img src="{{ asset('uploads/' ~ smartphone.picture) }}" alt="{{ smartphone.type }}" class="img-fluid w-50 mb-3">
                 {% endif %}
